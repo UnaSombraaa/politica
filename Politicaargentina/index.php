@@ -6,7 +6,7 @@
     <hr class="my-2">
     <p>Info</p>
     <p class="lead">
-        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button"> Seguir leyendo. . .</a>
+        <a class="btn btn-primary btn-lg" href="https://es.wikipedia.org/wiki/Anexo:Partidos_políticos_de_Argentina" role="button"> Seguir leyendo. . .</a>
     </p>
 </div>
 
