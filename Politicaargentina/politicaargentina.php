@@ -21,7 +21,7 @@ include("config/bd.php");?>
         <img class="card-img-top" src="holder.js/100x180/" alt="">
         <div class="card-body">
             <h4 class="card-title">Politicos</h4>
-       <a name="" id="" class="btn btn-primary" href="sentenciaSQL = $conexion->prepare(select * from partidospoliticos)" role="button">Ver mas</a>
+       <a name="" id="" class="btn btn-primary" href="pagina.php" role="button">Ver mas</a>
         </div>
     </div>    
 
