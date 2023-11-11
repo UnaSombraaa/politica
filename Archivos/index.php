@@ -1,5 +1,8 @@
+<?php require "../Politicaargentina/template/cabecera.php"?>
 <?php
 session_start();
+
+global $conn;
 
 $host = "localhost";
 $bd = "politicaargentina";
@@ -22,7 +25,7 @@ $sqlPoliticos = "SELECT p.politico_id, p.nombre, p.apellido, p.cargo, p.fecha_na
 
 $resultPoliticos = $conn->query($sqlPoliticos);
 
-$dir = "PoliticaArgentina/img/";
+$dir = "../PoliticaArgentina/img/";
 ?>
 
 <!DOCTYPE html>
@@ -37,11 +40,12 @@ $dir = "PoliticaArgentina/img/";
 <!-- En el head de tu HTML -->
 
 
-    <link href="../Politicaargentina/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Politicaargentina/assets/css/all.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <script src="../Politicaargentina/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="../Politicaargentina/assets/js/bootstrap.bundle.min.js"></script>
+   
 
 
 </head>
@@ -114,8 +118,12 @@ $dir = "PoliticaArgentina/img/";
     ?>
 
     <?php include 'nuevoModal.php'; ?>
-
-    <?php $partidoss->data_seek(0); ?>
+    
+    <?php foreach ($partidoss as $row_partido) { ?>
+    <option value="<?php echo $row_partido["id"]; ?>" <?= $row_partido["nombre"] ?>>
+        <?php echo $row_partido["nombre"]; ?>
+    </option>
+<?php } ?>
 
     <?php include 'editaModal.php'; ?>
     <?php include 'eliminaModal.php'; ?>
@@ -195,7 +203,7 @@ $dir = "PoliticaArgentina/img/";
         })
     </script>
 
-    <script src="Politicaargentina/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../Politicaargentina/assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

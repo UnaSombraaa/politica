@@ -1,4 +1,4 @@
-<!-- Modal edita registro -->
+<!-- Modal edita registro
 <div class="modal fade" id="editaModal" tabindex="-1" aria-labelledby="editaModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -50,4 +50,4 @@
 
         </div>
     </div>
-</div>
+</div> -->
